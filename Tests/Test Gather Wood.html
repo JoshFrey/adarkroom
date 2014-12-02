@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:63342/" />
+<title>Test Gather Wood</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Test Gather Wood</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=location_outside</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=#row_wood &gt; div.row_val</td>
+	<td>wood</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gatherButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=#row_wood &gt; div.row_val</td>
+	<td>newWood</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${wood}+10</td>
+	<td>expectedWood</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>${newWood}==${expectedWood}</td>
+	<td>true</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
